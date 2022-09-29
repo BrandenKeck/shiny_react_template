@@ -86,7 +86,7 @@ if (dir.exists("dist")) {
 shinyApp(ui, server)
 ```
 
-At a minimum, **public/index.html** should include a <div> for the app root and a <script> linking to the webpack-compiled React code:
+At a minimum, **public/index.html** should include a div for the app root and a script linking to the webpack-compiled React code:
 
 ```
 <!DOCTYPE html>
