@@ -4,7 +4,8 @@
   "description": "React / RShiny template",
   "scripts": {
     "start": "Rscript -e 'shiny::runApp(launch.browser=TRUE)'",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "frontend": "react-scripts start"
   },
   "author": "Branden Keck",
   "license": "MIT",
@@ -15,14 +16,30 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "babel-loader": "^8.2.5",
     "bootstrap": "^5.2.1",
     "css-loader": "^6.7.1",
+    "framer-motion": "^7.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
+    "react-scripts": "^5.0.1",
     "reactstrap": "^9.1.4",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

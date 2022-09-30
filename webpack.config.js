@@ -1,4 +1,5 @@
 module.exports = {
+
   output: {
     // Serve the bundle from /static
     publicPath: '/static/'
@@ -16,5 +17,10 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
+  },
+
+  externals: {
+    'shiny': 'window.Shiny'
   }
+
 }
