@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React / RShiny template",
   "scripts": {
-    "start": "Rscript -e 'shiny::runApp(launch.browser=TRUE)'",
+    "start": "Rscript -e \"shiny::runApp(launch.browser=TRUE)\"",
     "build": "webpack --mode production",
     "frontend": "react-scripts start"
   },

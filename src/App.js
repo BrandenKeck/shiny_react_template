@@ -53,8 +53,12 @@ const AnimationExample = ({rotate}) => {
 const Home = () => {
 
   // Hooks / Functions for Alert Message
-  const [visible, setVisible] = useState(false);
-  const dismissAlert = () => setVisible(false);
+  const [visibleSuccess, setVisibleSuccess] = useState(false);
+  const [visibleFailure, setVisibleFailure] = useState(false);
+  const dismissAlerts = () => {
+    setVisibleSuccess(false);
+    setVisibleFailure(false);
+  }
 
   // Hooks / Functions for Animation Example
   const [rotate, setRotate] = useState(false);
@@ -62,12 +66,13 @@ const Home = () => {
   // Communication with the server
   // Catch frontend-only mode with conditional on the Shiny library
   const checkComms = () => {
-    Shiny && Shiny.setInputValue("checkComms", {data: "Comms check."});
+    Shiny && Shiny.setInputValue("checkComms", {data: "Comms check.", random: Math.random()});
+    Shiny || setVisibleFailure(true);
   }
   useEffect(() => {
     Shiny && Shiny.addCustomMessageHandler('returnComms', (data) => {
       console.log(data.data);
-      setVisible(true);
+      setVisibleSuccess(true);
     });
   }, []);
 
@@ -76,8 +81,11 @@ const Home = () => {
     <>
 
     {/* Example of reactstrap integration */}
-    <Alert color="success" isOpen={visible} toggle={dismissAlert}>
+    <Alert color="success" isOpen={visibleSuccess} toggle={dismissAlerts}>
       Communication Successful.
+    </Alert>
+    <Alert color="danger" isOpen={visibleFailure} toggle={dismissAlerts}>
+      Communication Not Possible in Frontend Mode.
     </Alert>
 
     <div className="container text-center mt-4">
@@ -85,7 +93,6 @@ const Home = () => {
           <p className="fs-1 fw-bold">Shiny/React Template Application</p>
           <p className="text-muted font-monospace">
             Use the following buttons to check out some functionality.
-            (Comms don't work in frontend mode)
           </p>
         </div>
         <div className="row d-flex justify-content-center">
