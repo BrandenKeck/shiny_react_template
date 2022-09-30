@@ -230,13 +230,13 @@ npm run build
 npm start
 ```
 
-Note that on the RSVP server it is not necessary to run `npm start`.  Once the application is built in the ShinyApps directory, it will automatically deploy just like a typical RShiny application.  As mentioned, the repo contains an additional command which boots only the React front end and enables live-updates without the need to recompile React for RShiny integration:
+Note that on the RSVP server it is not necessary to run `npm start`.  Once the application is built in the ShinyApps directory, it will automatically deploy just like a typical RShiny application.  As mentioned, the repo contains an additional command which boots only the React front-end only and enables live-updates without the need to recompile React for RShiny integration:
 
 ```text-plain
 npm run frontend
 ```
 
-Remember that this command requires a dynamic import of Shiny on the JavaScript side and explicit handing of R server calls when the server is not running in front-end mode.
+Remember that this command requires a dynamic import of Shiny on the JavaScript side and explicit handing of R server calls when the server is running in front-end mode.
 
 Front-End / Back-End Communication
 ----------------------------------
