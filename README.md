@@ -1,9 +1,9 @@
 Create an NPM Project
 ---------------------
 
-Note: the first three steps of this walk-through are bundled into this bitbucket repository.  To bypass some grunt work, skip to the “Compiling and Running” step.  However, the full process is included here for the purpose of documenting these steps.  This approach uses a bare bones npm approach so that all minute configuration details are controlled.  For a faster approach that includes more boiler plate, see the “create-react-app” npm module.
+Note: the first three steps of this walk-through are bundled into this bitbucket repository.  To bypass some grunt work, skip to the “Compiling and Running” step.  However, the full process is included here for the purpose of documenting these steps.  This approach uses a bare bones npm approach so that all minute configuration details are controlled.  For a faster approach that includes more boiler plate, see the [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) npm module.
 
-In the project folder run `npm init` to create the project.  This will begin the package creation utility.  Complete each field, leaving fields blank where unnecessary or unknown.  After creating the project, open **package.json.**  Delete the **main** attribute and replace the **scripts** object with the following:
+In the project folder run `npm init` to create the project, beginning with the package creation utility.  Complete each field, leaving fields blank where unnecessary or unknown.  After creating the project, open **package.json.**  Delete the **main** attribute and replace the **scripts** object with the following:
 
 ```
 "scripts": {
