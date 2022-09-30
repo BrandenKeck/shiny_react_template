@@ -1,8 +1,6 @@
 Linking React to RShiny
 -----------------------
 
-This template is live on RSVP: https://sharedshiny-prod.jnj.com/user/bkeck/react_template
-
 This repository is intended to provide an example for linking RShiny to a React frontend.  RShiny is a simple, easily-deployed server system that lacks a lot of customizability that is often desired when writing web apps.  It is possible to brute-force custom solutions using vanilla HTML, CSS, and JS, however the resulting application is typically very messy.  By offloading URL routing and data management to React (which has tried and tested solutions for these concepts), there is greater potential for writing customized applications in an RShiny environment.
 
 This repo is a step-by-step customization based on the following sources:
